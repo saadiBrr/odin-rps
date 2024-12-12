@@ -100,7 +100,8 @@ function playGame(count) {
     }
     if (count == roundsPlayed) {
         let winner = humanScore > computerScore ? "You" : "Computer";
-        let winOrWins = winner == "You" ? "have" : "has";
+        let winOrWins = winner == "You" ? "win" : "wins";
         console.log(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
+        alert(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
     }
 }
