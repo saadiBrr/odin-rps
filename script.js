@@ -61,47 +61,49 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
-        if (humanChoice == "paper") {
-            if (computerChoice != 'paper' && computerChoice != 'scissors') {
-                humanScore++;
-                console.log(`Paper covers rock. You win this round! The score is ${humanScore}-${computerScore}.`);
-            }
-            else {
-                computerScore++;
-                console.log(`Scissors cut paper. You lose this round! The score is ${humanScore}-${computerScore}.`);
-            }
+    if (humanChoice == "paper") {
+        if (computerChoice != 'paper' && computerChoice != 'scissors') {
+            humanScore++;
+            console.log(`Paper covers rock. You win this round! The score is ${humanScore}-${computerScore}.`);
         }
-            if (humanChoice == "scissors") {
-                if (computerChoice != 'scissors' && computerChoice != 'rock') {
-                    humanScore++;
-                    console.log(`Scissors cut paper. You win this round! The score is ${humanScore}-${computerScore}.`);
-                }
-                else {
-                    computerScore++;
-                    console.log(`Rock crushes scissors. You lose this round! The score is ${humanScore}-${computerScore}.`);
-                }
-            }
-            roundsPlayed++;
+        else {
+            computerScore++;
+            console.log(`Scissors cut paper. You lose this round! The score is ${humanScore}-${computerScore}.`);
         }
-
-function playGame(count) {
-
-    while (count > roundsPlayed) {
-
-        const computerSelection = getComputerChoice();
-        const humanSelection = getHumanChoice();
-
-        if (humanSelection === computerSelection) {
-            console.log(`It's a tie! ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)} meets ${computerSelection}.`);
-            continue;
-        }
-
-        playRound(humanSelection, computerSelection);
     }
-    if (count == roundsPlayed) {
-        let winner = humanScore > computerScore ? "You" : "Computer";
-        let winOrWins = winner == "You" ? "win" : "wins";
-        console.log(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
-        alert(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
+    if (humanChoice == "scissors") {
+        if (computerChoice != 'scissors' && computerChoice != 'rock') {
+            humanScore++;
+            console.log(`Scissors cut paper. You win this round! The score is ${humanScore}-${computerScore}.`);
+        }
+        else {
+            computerScore++;
+            console.log(`Rock crushes scissors. You lose this round! The score is ${humanScore}-${computerScore}.`);
+        }
     }
+    roundsPlayed++;
 }
+
+
+
+// function playGame(count) {
+
+//     while (count > roundsPlayed) {
+
+//         const computerSelection = getComputerChoice();
+//         const humanSelection = getHumanChoice();
+
+//         if (humanSelection === computerSelection) {
+//             console.log(`It's a tie! ${humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1)} meets ${computerSelection}.`);
+//             continue;
+//         }
+
+//         playRound(humanSelection, computerSelection);
+//     }
+//     if (count == roundsPlayed) {
+//         let winner = humanScore > computerScore ? "You" : "Computer";
+//         let winOrWins = winner == "You" ? "win" : "wins";
+//         console.log(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
+//         alert(`You won ${humanScore} rounds, computer score ${computerScore}. ${winner} ${winOrWins}.`);
+//     }
+// }
