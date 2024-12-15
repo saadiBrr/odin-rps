@@ -1,0 +1,60 @@
+body {
+    background-color: #222831;
+}
+
+button img {
+    width: auto;
+    height: 100px;
+    margin: 20px;
+}
+
+button {
+    background-color: #393e46;
+    transition: transform .2s ease;
+}
+
+button:hover {
+    background-color: #4a4f57;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #5b5f68
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.output-container {
+    display: flex;
+    justify-content: center;
+    width: 390px;
+    padding: 30px;
+    font-size: 25px;
+    background-color: #222831;
+    color: white;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 77px;
+    background-color: #222831;
+    font-size: 30px;
+    color: white;
+}
