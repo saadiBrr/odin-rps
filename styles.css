@@ -58,3 +58,21 @@ button:active {
     font-size: 30px;
     color: white;
 }
+
+.footer {
+    display:flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    background-color: #393e46; 
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#github, #attributes {
+    margin-top: 0;
+    margin-bottom: 0;
+}
